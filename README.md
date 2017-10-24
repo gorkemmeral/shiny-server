@@ -1,3 +1,3 @@
 # shiny-server
 
-My Shiny server repo
+My Shiny Server repo
