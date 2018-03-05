@@ -6,14 +6,14 @@ shinyUI(pageWithSidebar(
 	headerPanel("A/B Test Statistical Significance Calculator"),
 	
 	sidebarPanel(
-	selectInput("variable", "Confidence Level for Significance",
+	selectInput("variable", "Select confidence level for significance",
 	list("95%" = "95",
 	"99%" = "99")), 
 	
-	numericInput("Avisitors", "Number of Control Visitors:", 1000),
-	numericInput("Bvisitors", "Number of Variation Visitors:", 1000),
-	numericInput("Aconversions", "Conversions in Contol Case:", 200),
-	numericInput("Bconversions", "Conversions in Variation Case:", 200),
+	numericInput("Avisitors", "Enter number of visitor for the control group:", 1000),
+	numericInput("Bvisitors", "Enter number of visitors for the variation group:", 1000),
+	numericInput("Aconversions", "Enter number of conversions for the control group:", 200),
+	numericInput("Bconversions", "Enter number of conversions for the variation group:", 200),
 	
 	submitButton("Calculate")
 
