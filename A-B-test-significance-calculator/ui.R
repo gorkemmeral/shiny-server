@@ -3,10 +3,10 @@ library(shiny)
 shinyUI(pageWithSidebar(
 
 	#Appl title
-	headerPanel("A/B Test Analysis"),
+	headerPanel("A/B Test Statistical Significance Calculator"),
 	
 	sidebarPanel(
-	selectInput("variable", "Significance at Confidence",
+	selectInput("variable", "Confidence Level for Significance",
 	list("95%" = "95",
 	"99%" = "99")), 
 	
@@ -15,7 +15,7 @@ shinyUI(pageWithSidebar(
 	numericInput("Aconversions", "Conversions in Contol Case:", 200),
 	numericInput("Bconversions", "Conversions in Variation Case:", 200),
 	
-	submitButton("Statistical Analysis")
+	submitButton("Calculate")
 
 	),
 	
