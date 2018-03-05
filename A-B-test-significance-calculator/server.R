@@ -21,7 +21,7 @@ shinyServer(function(input, output) {
 		else{
 		Confidence_A <-c(conversion_rateA - 1.96*seA,  conversion_rateA + 1.96*seA)
 		}
-		paste("Conversion rate for control group is", conversion_rateA) #, "with the", input$variable, "%","confidence interval", "[",round(Confidence_A[1], digits=3), ",", round(Confidence_A[2], digits=3),"]")
+		paste("Conversion rate for control group is", conversion_rateA*100, "%") #, "with the", input$variable, "%","confidence interval", "[",round(Confidence_A[1], digits=3), ",", round(Confidence_A[2], digits=3),"]")
 		
 	})
 		
@@ -39,7 +39,7 @@ shinyServer(function(input, output) {
 		else{
 		Confidence_B <-c(conversion_rateB - 1.96*seB,  conversion_rateB + 1.96*seB)
 		}
-		paste("Conversion rate for variation group is", conversion_rateB) #"with the", input$variable, "%", "confidence interval", "[",round(Confidence_B[1], digits=3), ",", round(Confidence_B[2], digits=3),"]")
+		paste("Conversion rate for variation group is", conversion_rateB*100, "%") #"with the", input$variable, "%", "confidence interval", "[",round(Confidence_B[1], digits=3), ",", round(Confidence_B[2], digits=3),"]")
 	})
 
 	output$Zscore <- renderText({
@@ -73,18 +73,18 @@ shinyServer(function(input, output) {
 		
 		if (input$variable == '95'){
 			if (p_value < 0.05){
-				paste("p-value = ", round(p_value, digits=3), ".Results are statistically significant")				
+				paste("p-value = ", round(p_value, digits=3), "|", "Results are statistically significant")				
 			}
 			else{
-				paste("p-value = ", round(p_value, digits=3),".", "Results are not statistically significant")
+				paste("p-value = ", round(p_value, digits=3),"|", "Results are not statistically significant")
 			}
 		}
 		else if (input$variable == '99'){
 			if (p_value < 0.01){
-				paste("p-value = ", round(p_value, digits=3),".", "Results are statistically significant")
+				paste("p-value = ", round(p_value, digits=3),"|", "Results are statistically significant")
 			}
 			else{
-				paste("p-value = ", round(p_value, digits=3),".","Results are not statistically significant")
+				paste("p-value = ", round(p_value, digits=3),"|","Results are not statistically significant")
 				}
 				}
 	})
