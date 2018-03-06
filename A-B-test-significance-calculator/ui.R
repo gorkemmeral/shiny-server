@@ -15,7 +15,9 @@ shinyUI(pageWithSidebar(
 	numericInput("Aconversions", "Enter number of conversions for the control group", 200),
 	numericInput("Bconversions", "Enter number of conversions for the variation group", 200),
 	
-	submitButton("Calculate")
+	submitButton("Calculate"),
+	hr(),
+	span("Return to", a(href = "gorkemmeral.com", "gorkemmeral.com"))
 
 	),
 	
@@ -25,7 +27,6 @@ shinyUI(pageWithSidebar(
 		verbatimTextOutput("Confidence_intervalB"),
 		verbatimTextOutput("Zscore"),
 		verbatimTextOutput("pvalue")
-	),
-	hr(),
-	span("Return to", a(href = "gorkemmeral.com", "gorkemmeral.com"))
+	)
+
 ))
