@@ -19,7 +19,7 @@ shinyUI(pageWithSidebar(
 	hr(),
 	span("Return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com")),
 	br(), br(),
-	span("Code is forked from", a(href = "https://github.com/Jverma/Significance-in-A-B-testing", "here"))
+	span("Code forked from", a(href = "https://github.com/Jverma/Significance-in-A-B-testing", "here"))
 
 	),
 	
