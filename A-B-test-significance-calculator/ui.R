@@ -25,7 +25,7 @@ shinyUI(pageWithSidebar(
 		verbatimTextOutput("Confidence_intervalB"),
 		verbatimTextOutput("Zscore"),
 		verbatimTextOutput("pvalue")
-	)
+	),
 	hr(),
 	span("Return to", a(href = "gorkemmeral.com", "gorkemmeral.com"))
 ))
