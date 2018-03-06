@@ -17,7 +17,7 @@ shinyUI(pageWithSidebar(
 	
 	submitButton("Calculate"),
 	hr(),
-	span("Return to", a(href = "gorkemmeral.com", "gorkemmeral.com"))
+	span("Return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com"))
 
 	),
 	
