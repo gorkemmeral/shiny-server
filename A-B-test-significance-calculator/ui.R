@@ -10,10 +10,10 @@ shinyUI(pageWithSidebar(
 	list("95%" = "95",
 	"99%" = "99")), 
 	
-	numericInput("Avisitors", "Enter number of visitor for the control group:", 1000),
-	numericInput("Bvisitors", "Enter number of visitors for the variation group:", 1000),
-	numericInput("Aconversions", "Enter number of conversions for the control group:", 200),
-	numericInput("Bconversions", "Enter number of conversions for the variation group:", 200),
+	numericInput("Avisitors", "Enter number of visitor for the control group", 1000),
+	numericInput("Bvisitors", "Enter number of visitors for the variation group", 1000),
+	numericInput("Aconversions", "Enter number of conversions for the control group", 200),
+	numericInput("Bconversions", "Enter number of conversions for the variation group", 200),
 	
 	submitButton("Calculate")
 
