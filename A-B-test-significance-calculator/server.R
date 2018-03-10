@@ -21,7 +21,7 @@ shinyServer(function(input, output) {
 		else{
 		Confidence_A <-c(conversion_rateA - 1.96*seA,  conversion_rateA + 1.96*seA)
 		}
-		paste("Conversion rate for control group is", conversion_rateA*100, "%") #, "with the", input$variable, "%","confidence interval", "[",round(Confidence_A[1], digits=3), ",", round(Confidence_A[2], digits=3),"]")
+		paste("Conversion rate for control group is", round(conversion_rateA*100, digits = 2), "%") #, "with the", input$variable, "%","confidence interval", "[",round(Confidence_A[1], digits=3), ",", round(Confidence_A[2], digits=3),"]")
 		
 	})
 		
