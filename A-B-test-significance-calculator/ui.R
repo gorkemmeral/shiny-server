@@ -17,7 +17,7 @@ shinyUI(pageWithSidebar(
 	numericInput("Avisitors", "Enter number of visitor for the control group (A)", 1000),
 	numericInput("Bvisitors", "Enter number of visitors for the variation group (B)", 1000),
 	numericInput("Aconversions", "Enter number of conversions for the control group (A)", 200),
-	numericInput("Bconversions", "Enter number of conversions for the variation group (B)", 200),
+	numericInput("Bconversions", "Enter number of conversions for the variation group (B)", 250),
 	
 	submitButton("Calculate"),
 	hr(),
