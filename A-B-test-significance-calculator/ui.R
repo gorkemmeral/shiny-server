@@ -7,6 +7,8 @@ shinyUI(pageWithSidebar(
 	
 	sidebarPanel(
 	span("Use this calculator to validate your hypothesis. Enter the results of your experiment below and click on the 'Calculate' button."),
+	br(),
+	span("Or return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com")),
 	hr(),
 	selectInput("variable", "Select confidence level for significance",
 	list("95%" = "95",
