@@ -52,7 +52,7 @@ shinyServer(function(input, output) {
 		conversion_rateB = B_conversions/B_visitors
 		seB <- sqrt(conversion_rateB*(1-conversion_rateB)/B_visitors)
 		Z_score =  (conversion_rateA - conversion_rateB)/sqrt(seA**2 + seB**2)
-		paste("z-Score = ", round(Z_score,digits=3)) 
+		paste("z-score = ", round(Z_score,digits=3)) 
 	})	
 	
 	output$pvalue <- renderText({
