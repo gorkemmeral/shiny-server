@@ -73,18 +73,18 @@ shinyServer(function(input, output) {
 		
 		if (input$variable == '95'){
 			if (p_value < 0.05){
-				paste("p-value = ", round(p_value, digits=3), "|", "<span style=\"color:green\">Results are statistically significant</span", "|")				
+				paste("p-value = ", round(p_value, digits=3), "|", "<span style=\"color:green;font-size:12\">Results are statistically significant</span", "|")				
 			}
 			else{
-				paste("p-value = ", round(p_value, digits=3),"|", "<span style=\"color:red\">Results are not statistically significant</span", "|")
+				paste("p-value = ", round(p_value, digits=3),"|", "<span style=\"color:red;font-size:12\">Results are not statistically significant</span", "|")
 			}
 		}
 		else if (input$variable == '99'){
 			if (p_value < 0.01){
-				paste("p-value = ", round(p_value, digits=3),"|", "<span style=\"color:green\">Results are statistically significant</span", "|")
+				paste("p-value = ", round(p_value, digits=3),"|", "<span style=\"color:green;font-size:12\">Results are statistically significant</span", "|")
 			}
 			else{
-				paste("p-value = ", round(p_value, digits=3),"|", "<span style=\"color:red\">Results are not statistically significant</span", "|")
+				paste("p-value = ", round(p_value, digits=3),"|", "<span style=\"color:red;font-size:12\">Results are not statistically significant</span", "|")
 				}
 				}
 	})
