@@ -84,7 +84,7 @@ shinyServer(function(input, output) {
 				paste("p-value = ", round(p_value, digits=3))
 			}
 			else{
-				paste("p-value = ", round(p_value, digits=3), "<span style=\"color:red;font-size:160%\">Results are not statistically significant</span")
+				paste("p-value = ", round(p_value, digits=3))
 				}
 				}
 	})
