@@ -19,7 +19,7 @@ shinyUI(pageWithSidebar(
 	
 	submitButton("Calculate"),
 	hr(),
-	span(<strong>"Return to"<strong>, a(href = "http://gorkemmeral.com", <strong>"gorkemmeral.com"<strong>)),
+	<strong>span("Return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com"))<strong>,
 	br(),
 	span("Code forked from", a(href = "https://github.com/Jverma/Significance-in-A-B-testing", "here"))
 
