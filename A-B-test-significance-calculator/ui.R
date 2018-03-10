@@ -8,7 +8,7 @@ shinyUI(pageWithSidebar(
 	sidebarPanel(
 	span("Use this calculator to validate your hypothesis. Enter the results of your experiment below and click on the 'Calculate' button."),
 	br(),
-	span("This is a one-sided calculator; if the conversion rate of the variation group (B) is lower than the control group (A), no conclusive statement can be made.")
+	span("This is a one-sided calculator; if the conversion rate of the variation group (B) is lower than the control group (A), no conclusive statement can be made."),
 	br(), br(),
 	span("Or return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com")),
 	hr(),
