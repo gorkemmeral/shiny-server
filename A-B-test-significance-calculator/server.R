@@ -88,5 +88,37 @@ shinyServer(function(input, output) {
 				}
 				}
 	})
-	
+	output$statement <- renderText({
+		A_visitors <- input$Avisitors
+		A_conversions <- input$Aconversions
+		conversion_rateA = A_conversions/A_visitors
+		seA <- sqrt(conversion_rateA*(1-conversion_rateA)/	A_visitors)
+		
+		B_visitors <- input$Bvisitors
+		B_conversions <- input$Bconversions
+		conversion_rateB = B_conversions/B_visitors
+		seB <- sqrt(conversion_rateB*(1-conversion_rateB)/B_visitors)
+		Z_score =  (conversion_rateA - conversion_rateB)/sqrt(seA**2 + seB**2)
+		
+		p_value <- 1-pnorm(Z_score)
+		paste("p-value = ", round(p_value, digits=3))
+		
+		
+		if (input$variable == '95'){
+			if (p_value < 0.05){
+				paste("<span style=\"color:green;font-size:160%\">Results are statistically significant</span")				
+			}
+			else{
+				paste("<span style=\"color:red;font-size:160%\">Results are not statistically significant</span")
+			}
+		}
+		else if (input$variable == '99'){
+			if (p_value < 0.01){
+				paste("<span style=\"color:green;font-size:160%\">Results are statistically significant</span")
+			}
+			else{
+				paste("<span style=\"color:red;font-size:160%\">Results are not statistically significant</span")
+				}
+				}
+	})
 })
