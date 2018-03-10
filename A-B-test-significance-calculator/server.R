@@ -51,7 +51,7 @@ shinyServer(function(input, output) {
 		B_conversions <- input$Bconversions
 		conversion_rateB = B_conversions/B_visitors
 		seB <- sqrt(conversion_rateB*(1-conversion_rateB)/B_visitors)
-		Z_score =  (conversion_rateA - conversion_rateB)/sqrt(seA**2 + seB**2)
+		Z_score =  (conversion_rateB - conversion_rateA)/sqrt(seA**2 + seB**2)
 		paste("z-score = ", round(Z_score,digits=3)) 
 	})	
 	
@@ -65,7 +65,7 @@ shinyServer(function(input, output) {
 		B_conversions <- input$Bconversions
 		conversion_rateB = B_conversions/B_visitors
 		seB <- sqrt(conversion_rateB*(1-conversion_rateB)/B_visitors)
-		Z_score =  (conversion_rateA - conversion_rateB)/sqrt(seA**2 + seB**2)
+		Z_score =  (conversion_rateB - conversion_rateA)/sqrt(seA**2 + seB**2)
 		
 		p_value <- 1-pnorm(Z_score)
 		paste("p-value = ", round(p_value, digits=3))
@@ -98,7 +98,7 @@ shinyServer(function(input, output) {
 		B_conversions <- input$Bconversions
 		conversion_rateB = B_conversions/B_visitors
 		seB <- sqrt(conversion_rateB*(1-conversion_rateB)/B_visitors)
-		Z_score =  (conversion_rateA - conversion_rateB)/sqrt(seA**2 + seB**2)
+		Z_score =  (conversion_rateB - conversion_rateA)/sqrt(seA**2 + seB**2)
 		
 		p_value <- 1-pnorm(Z_score)
 		paste("p-value = ", round(p_value, digits=3))
