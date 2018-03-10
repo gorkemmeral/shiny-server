@@ -6,8 +6,9 @@ shinyUI(pageWithSidebar(
 	headerPanel("A/B Test Statistical Significance Calculator"),
 	
 	sidebarPanel(
-	hr(),
 	span("Use this calculator to validate your hypothesis. Enter the values of your experiment and click on the 'Calculate' button"),
+	hr(),
+	br(), 
 	selectInput("variable", "Select confidence level for significance",
 	list("95%" = "95",
 	"99%" = "99")), 
@@ -20,7 +21,7 @@ shinyUI(pageWithSidebar(
 	submitButton("Calculate"),
 	hr(),
 	span("Return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com")),
-	br(), br(),
+	br(),
 	span("Code forked from", a(href = "https://github.com/Jverma/Significance-in-A-B-testing", "here"))
 
 	),
