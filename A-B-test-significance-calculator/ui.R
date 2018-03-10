@@ -32,7 +32,7 @@ shinyUI(pageWithSidebar(
 		verbatimTextOutput("Confidence_intervalA"),
 		verbatimTextOutput("Confidence_intervalB"),
 		verbatimTextOutput("Zscore"),
-		htmlOutput("pvalue")
+		verbatimTextOutput(htmlOutput("pvalue"))
 	)
 
 ))
