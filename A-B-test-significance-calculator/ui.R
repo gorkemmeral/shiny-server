@@ -6,9 +6,8 @@ shinyUI(pageWithSidebar(
 	headerPanel("A/B Test Statistical Significance Calculator"),
 	
 	sidebarPanel(
-	span("Use this calculator to validate your hypothesis. Enter the values of your experiment and click on the 'Calculate' button"),
+	span("Use this calculator to validate your hypothesis. Enter the values of your experiment and click on the 'Calculate' button."),
 	hr(),
-	br(), 
 	selectInput("variable", "Select confidence level for significance",
 	list("95%" = "95",
 	"99%" = "99")), 
