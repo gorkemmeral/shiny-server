@@ -21,7 +21,7 @@ shinyUI(pageWithSidebar(
 	hr(),
 	<form>
 <input class="MyButton" type="button" value="Return to gorkemmeral.com" onclick="window.location.href='http://gorkemmeral.com'" />
-</form>,span("Return to", a(href = "http://gorkemmeral.com", "gorkemmeral.com")),
+</form>,
 	br(),
 	span("Code forked from", a(href = "https://github.com/Jverma/Significance-in-A-B-testing", "here"))
 
