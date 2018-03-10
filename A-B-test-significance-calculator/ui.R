@@ -19,9 +19,8 @@ shinyUI(pageWithSidebar(
 	
 	submitButton("Calculate"),
 	hr(),
-	<form>
 <input type="button" value="Return to gorkemmeral.com" onclick="window.location.href='http://gorkemmeral.com'" />
-</form>,
+,
 	br(),
 	span("Code forked from", a(href = "https://github.com/Jverma/Significance-in-A-B-testing", "here"))
 
