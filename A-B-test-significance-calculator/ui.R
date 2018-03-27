@@ -1,10 +1,9 @@
 library(shiny)
 
 shinyUI(pageWithSidebar(
-
+	tags$head(tags$meta(name = "Description", content = 'Statistical significance calculator for A/B test results. Enter your test results, calculate the p-value and z-score, see if the results are statistically significant.")),
 	#Appl title
 	headerPanel("A/B Test Statistical Significance Calculator"),
-	tags$meta(name = "Description", content = 'Statistical significance calculator for A/B test results. Enter your test results, calculate the p-value and z-score, see if the results are statistically significant."),
 	sidebarPanel(
 	span("Use this calculator to validate your hypothesis. Enter the results of your experiment below and click on the 'Calculate' button. This is a one-sided calculator; if the conversion rate of the variation group (B) is lower than the control group (A), no conclusive statement can be made."),
 	br(), br(),
