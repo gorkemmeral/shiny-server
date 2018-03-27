@@ -33,7 +33,10 @@ shinyUI(pageWithSidebar(
 		verbatimTextOutput("Confidence_intervalB"),
 		verbatimTextOutput("Zscore"),
 		verbatimTextOutput("pvalue"),
-		htmlOutput("statement")
+		htmlOutput("statement"),
+		tags$head(
+	tags$meta(name = "Description", content = "Statistical significance calculator for A/B test results. Enter your test results, calculate the p-value and z-score, see if the results are statistically significant.")
+	)
 	)
 	
 
