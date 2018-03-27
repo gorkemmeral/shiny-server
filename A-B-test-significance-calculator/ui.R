@@ -1,7 +1,7 @@
 library(shiny)
+tags$head(tags$meta(name = "Description", content = "Statistical significance calculator for A/B test results. Enter your test results, calculate the p-value and z-score, see if the results are statistically significant.")),
 
 shinyUI(pageWithSidebar(
-	tags$head(tags$meta(name = "Description", content = "Statistical significance calculator for A/B test results. Enter your test results, calculate the p-value and z-score, see if the results are statistically significant.")),
 	#Appl title
 	headerPanel("A/B Test Statistical Significance Calculator"),
 	sidebarPanel(
